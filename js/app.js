@@ -1,1 +1,1 @@
-var app = angular.module('mealApp', []);
+var app = angular.module('mealApp', ['ngMaterial']);

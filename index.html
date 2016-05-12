@@ -4,44 +4,83 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meal Planner</title>
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
         <link rel="stylesheet" href='styles.css'/>
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
-
     </head>
 
     <body ng-app='mealApp'>
 
-        <div ng-controller="MainController as MC" class="container box">
+        <div ng-controller="MainController as MC" ng-cloak>
             <h1>{{MC.title}}</h1>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
-                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-                <!-- Optional: clear the XS cols if their content doesn't match in height -->
-                <div class="clearfix visible-xs-block"></div>
-                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-            </div>
-        </div>
+            <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+                <md-grid-tile class="gray" md-rowspan="3" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+                    <md-grid-tile-footer>
+                        <h3>#1: (3r x 2c)</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="green">
+                    <md-grid-tile-footer>
+                        <h3>#2: (1r x 1c)</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="yellow">
+                    <md-grid-tile-footer>
+                        <h3>#3: (1r x 1c)</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="blue" md-rowspan="2">
+                    <md-grid-tile-footer>
+                        <h3>#4: (2r x 1c)</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="red" md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+                    <md-grid-tile-footer>
+                        <h3>#5: (2r x 2c)</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+                <md-grid-tile class="green" md-rowspan="2">
+                    <md-grid-tile-footer>
+                        <h3>#6: (2r x 1c)</h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
 
+            <!-- <div>
+                <div layout="row">
+                    <div flex>First item in row</div>
+                    <div flex>Second item in row</div>
+                </div>
+                <div layout="column">
+                    <div flex>First item in column</div>
+                    <div flex>Second item in column</div>
+                </div>
+            </div> -->
+        </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
         <!-- Angular -->
-        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js'></script>
+        <!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js'></script> -->
+
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
         <script src='js/app.js'></script>
         <script src='js/controllers.js'></script>
 
