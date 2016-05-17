@@ -30,3 +30,5 @@ md-grid-list {
  md-grid-tile {
     transition: all 400ms ease-out 50ms;
 }
+.fabToolbardemoBasicUsage md-fab-toolbar.md-right md-fab-trigger.align-with-text {
+  left: 7px; }
